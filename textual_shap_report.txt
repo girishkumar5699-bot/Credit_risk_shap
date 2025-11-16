@@ -1,0 +1,44 @@
+Global SHAP summary — top 5 features and interpretation:
+1. num__num_open_accounts: mean(|SHAP|)=0.6808 — higher absolute SHAP means larger impact on the model output.
+2. num__employment_length_years: mean(|SHAP|)=0.5144 — higher absolute SHAP means larger impact on the model output.
+3. num__loan_term_months: mean(|SHAP|)=0.3806 — higher absolute SHAP means larger impact on the model output.
+4. num__age: mean(|SHAP|)=0.2179 — higher absolute SHAP means larger impact on the model output.
+5. num__income: mean(|SHAP|)=0.1711 — higher absolute SHAP means larger impact on the model output.
+
+Local case studies (plain-language):
+
+Case: true_positive (test index 10)
+Model predicted probability of default = 0.669; predicted label = 1; true label = 1
+Top drivers:
+ - num__debt_to_income => increases probability by SHAP 2.9623
+ - num__employment_length_years => decreases probability by SHAP -0.7477
+ - num__age => decreases probability by SHAP -0.7037
+ - num__loan_term_months => decreases probability by SHAP -0.3531
+ - num__loan_amount => decreases probability by SHAP -0.2003
+ - num__income => decreases probability by SHAP -0.1990
+ - cat__home_ownership_RENT => decreases probability by SHAP -0.0692
+ - cat__home_ownership_MORTGAGE => increases probability by SHAP 0.0660
+
+Case: false_positive (test index 149)
+Model predicted probability of default = 0.698; predicted label = 1; true label = 0
+Top drivers:
+ - num__debt_to_income => increases probability by SHAP 3.5748
+ - num__age => decreases probability by SHAP -1.1346
+ - num__loan_amount => decreases probability by SHAP -0.4963
+ - num__loan_term_months => decreases probability by SHAP -0.2508
+ - num__employment_length_years => decreases probability by SHAP -0.2467
+ - num__num_open_accounts => decreases probability by SHAP -0.2400
+ - num__credit_score => decreases probability by SHAP -0.1875
+ - cat__home_ownership_RENT => decreases probability by SHAP -0.1330
+
+Case: false_negative (test index 1)
+Model predicted probability of default = 0.194; predicted label = 0; true label = 1
+Top drivers:
+ - num__num_open_accounts => decreases probability by SHAP -0.5759
+ - num__employment_length_years => decreases probability by SHAP -0.4668
+ - num__loan_term_months => decreases probability by SHAP -0.2787
+ - num__age => decreases probability by SHAP -0.2003
+ - num__income => increases probability by SHAP 0.1158
+ - num__credit_score => decreases probability by SHAP -0.0639
+ - num__loan_amount => increases probability by SHAP 0.0590
+ - cat__home_ownership_MORTGAGE => decreases probability by SHAP -0.0552

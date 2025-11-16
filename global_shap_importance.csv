@@ -1,0 +1,15 @@
+feature,mean_abs_shap
+num__num_open_accounts,0.6808077
+num__employment_length_years,0.5144305
+num__loan_term_months,0.38061422
+num__age,0.21787283
+num__income,0.171076
+num__loan_amount,0.16203614
+num__debt_to_income,0.14683834
+num__credit_score,0.1388013
+cat__home_ownership_OWN,0.0860603
+cat__home_ownership_MORTGAGE,0.06785661
+num__delinquencies_2y,0.064678766
+cat__home_ownership_RENT,0.061294403
+cat__home_ownership_OTHER,0.041609883
+num__num_derogatory_marks,0.034290217

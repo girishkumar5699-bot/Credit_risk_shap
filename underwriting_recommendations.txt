@@ -1,0 +1,3 @@
+1) Add a DTI threshold policy: require manual review when debt_to_income above a chosen cutoff AND credit_score below a threshold.
+2) Early-warning monitoring: flag increases in delinquencies_2y or num_derogatory_marks for proactive outreach.
+3) Underwrite loan_amount relative to income: require additional documentation or collateral when loan-to-income (DTI) exceeds X%.
